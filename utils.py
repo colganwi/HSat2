@@ -3,7 +3,7 @@ import numpy as np
 """
 This function generates the baysian probability for each subfamily
 given a sequence
-""" 
+"""
 def get_probs(mers,subfamilies):
     probs = {}
     lookup = subfamilies.keys()

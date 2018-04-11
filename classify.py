@@ -9,5 +9,7 @@ def classify(read,probs):
         mer = read[i:i+24]
         if(probs.has_key(mer)):
             prob = np.multiply(prob,probs[mer])
+    prob = np.nan_to_num(prob)
+    prob = prob + .1**300
     pred = np.divide(prob,np.sum(prob))
     return pred
